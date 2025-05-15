@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   animation: fadeIn 2s ease-in-out;
   background-color: #b79310; /* color mostaza oscuro como fondo */
+  position: relative;
 }
 
 /* Ocultar mensaje general */
@@ -23,21 +24,23 @@ body {
 }
 
 /* Estilos para el mensaje emergente del formulario */
+
 .popup {
-  color: #fff;
-  background: linear-gradient(135deg, rgba(255, 255, 0, 0.95), rgba(34,139,34, 0.95));
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background: linear-gradient(135deg, #b6e63d, #2e8b57);
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   font-size: 1.5rem;
   text-align: center;
   max-width: 90%;
-  animation: popupAnim 1s ease-out forwards;
+  position: fixed;
+  top: 20%;
+  z-index: 999;
   opacity: 0;
   transform: scale(0.5);
-  transition: opacity 0.3s ease;
-  position: absolute;
-  top: 20%;
+  animation: popupAnim 0.8s ease-out forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .popup.show {
@@ -71,6 +74,6 @@ body {
   }
   .popup {
     font-size: 1.2rem;
-    padding: 15px;
+    padding: 15px 20px;
   }
 }
