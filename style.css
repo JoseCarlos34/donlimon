@@ -1,79 +1,46 @@
-/* Estilos responsivos y animados para DON LIMÓN */
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-image: url('img/donlimon.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: fadeIn 2s ease-in-out;
-  background-color: #b79310; /* color mostaza oscuro como fondo */
-  position: relative;
-}
-
-/* Ocultar mensaje general */
-.mensaje {
-  display: none;
-}
-
-/* Estilos para el mensaje emergente del formulario */
-
 .popup {
   color: #ffffff;
   background: linear-gradient(135deg, #b6e63d, #2e8b57);
   padding: 20px 25px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
   text-align: center;
   max-width: 90%;
+  width: 320px;
   position: fixed;
-  top: 20%;
-  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  z-index: 9999;
   opacity: 0;
-  transform: scale(0.5);
   animation: popupAnim 0.8s ease-out forwards;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .popup.show {
   opacity: 1;
-  transform: scale(1);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  transform: translate(-50%, -50%) scale(1);
 }
 
 @keyframes popupAnim {
   0% {
-    transform: scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
     opacity: 0;
   }
   60% {
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
 @media (max-width: 768px) {
-  body {
-    background-size: contain;
-    background-position: center;
-  }
   .popup {
     font-size: 1.2rem;
     padding: 15px 20px;
+    width: 90vw;  /* ancho adaptado a móviles */
   }
 }
