@@ -3,9 +3,9 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('img/donlimon.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Arial', sans-serif;
@@ -14,6 +14,7 @@ body {
   align-items: center;
   flex-direction: column;
   animation: fadeIn 2s ease-in-out;
+  background-color: #ffffff; /* fallback para imagen */
 }
 
 .mensaje {
@@ -21,7 +22,7 @@ body {
   font-size: 1.8rem;
   text-align: center;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  background: linear-gradient(135deg, rgba(34,139,34, 0.8), rgba(255, 255, 0, 0.8));
+  background: linear-gradient(135deg, rgba(34,139,34, 0.85), rgba(255, 255, 0, 0.85));
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -54,6 +55,7 @@ body {
     padding: 15px;
   }
   body {
-    background-position: top;
+    background-size: contain;
+    background-position: center;
   }
 }
