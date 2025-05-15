@@ -14,7 +14,7 @@ body {
   align-items: center;
   flex-direction: column;
   animation: fadeIn 2s ease-in-out;
-  background-color: #b38b00; /* color mostaza oscuro como fondo */
+  background-color: #9e7e07; /* color mostaza oscuro como fondo */
 }
 
 /* Ocultamos el mensaje */
