@@ -1,3 +1,30 @@
+/* Estilos responsivos y animados para DON LIMÓN */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('img/donlimon.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 2s ease-in-out;
+  background-color: #b79310; /* color mostaza oscuro como fondo */
+  position: relative;
+}
+
+/* Ocultar mensaje general */
+.mensaje {
+  display: none;
+}
+
+/* Estilos para el mensaje emergente del formulario */
+
 .popup {
   color: #ffffff;
   background: linear-gradient(135deg, #b6e63d, #2e8b57);
@@ -23,6 +50,11 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes popupAnim {
   0% {
     transform: translate(-50%, -50%) scale(0.5);
@@ -38,6 +70,10 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: center;
+  }
   .popup {
     font-size: 1.2rem;
     padding: 15px 20px;
