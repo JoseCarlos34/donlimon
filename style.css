@@ -1,3 +1,5 @@
+/* Estilos responsivos y animados para DON LIMÓN */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,18 +8,52 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .mensaje {
-  color: white;
-  font-size: 2rem;
+  color: #fff;
+  font-size: 1.8rem;
   text-align: center;
-  text-shadow: 2px 2px 6px black;
-  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, rgba(34,139,34, 0.8), rgba(255, 255, 0, 0.8));
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-width: 90%;
+  animation: bounceIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .mensaje {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  body {
+    background-position: top;
+  }
 }
