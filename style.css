@@ -28,24 +28,24 @@ body {
 .popup {
   color: #145214; /* verde oscuro */
   background: #ffffff; /* fondo blanco */
-  padding: 25px 30px;
-  border-radius: 25px;
-  box-shadow: 0 12px 30px rgba(20, 82, 20, 0.4);
-  font-size: 1.6rem;
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(20, 82, 20, 0.3);
+  font-size: 1.2rem;
   font-weight: 600;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   max-width: 90%;
-  width: 340px;
+  width: 280px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.7);
   z-index: 9999;
   opacity: 0;
-  animation: popupAnim 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  border: 3px solid #4CAF50; /* borde verde vivo */
+  animation: popupAnim 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border: 2px solid #4CAF50; /* borde verde vivo */
 }
 
 .popup.show {
@@ -78,9 +78,9 @@ body {
     background-position: center;
   }
   .popup {
-    font-size: 1.3rem;
-    padding: 20px 25px;
-    width: 90vw;  /* ancho adaptado a móviles */
-    border-radius: 20px;
+    font-size: 1rem;
+    padding: 12px 18px;
+    width: 85vw;  /* ancho adaptado a móviles */
+    border-radius: 14px;
   }
 }
