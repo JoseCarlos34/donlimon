@@ -15,7 +15,7 @@ setTimeout(() => {
 
   // Listeners de los botones
   document.getElementById('btn-si').onclick = () => {
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScbi6Yvm_FYCHGXEDE40N8ejmK0H7z7aDpiO-W7DXcHatrvNA/viewform?usp=header";
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform?usp=header";
   };
   document.getElementById('btn-no').onclick = () => {
     popup.remove(); // Cierra el popup
