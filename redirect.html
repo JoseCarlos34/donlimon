@@ -5,10 +5,39 @@
   <title>Gracias por registrarte</title>
   <meta http-equiv="refresh" content="2;url=https://donlimon.vercel.app/">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
     body {
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #d4ed91, #a3d858);
+      color: #3a4a00;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px #a4bf26;
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #5a6c00;
+      text-shadow: 1px 1px 2px #cde17a;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
