@@ -2,36 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gracias por registrarte</title>
+  <title>Redirigiendo a DON LIMÓN...</title>
+  <meta http-equiv="refresh" content="2;url=https://donlimon.vercel.app/">
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
-      padding-top: 50px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
+      padding-top: 100px;
     }
   </style>
 </head>
 <body>
-  <h2>🎉 ¡Gracias por registrarte en DON LIMÓN!</h2>
-  <p>Ya puedes volver a la página principal.</p>
-  <button onclick="volverInicio()">Volver al inicio</button>
+  <h2>¡Gracias por registrarte! 🥳</h2>
+  <p>Serás redirigido automáticamente a la página principal...</p>
 
   <script>
-    // Guardamos en sessionStorage que completó el formulario
+    // Marcar que ya completó el formulario
     sessionStorage.setItem('formularioCompletado', 'true');
-
-    function volverInicio() {
-      window.location.href = "https://donlimon.vercel.app/";
-    }
   </script>
 </body>
 </html>
