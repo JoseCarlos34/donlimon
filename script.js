@@ -1,7 +1,10 @@
 setTimeout(() => {
+  // Verificar si el formulario ya fue completado
+  if (sessionStorage.getItem('formularioCompletado')) return;
+
   // Crear el contenedor del mensaje emergente
   const popup = document.createElement('div');
-  popup.className = 'popup show'; // Importante: clase para animación + estilos
+  popup.className = 'popup show'; // clase para estilos y animación
 
   // Contenido del mensaje
   popup.innerHTML = `
@@ -15,8 +18,10 @@ setTimeout(() => {
 
   // Listeners de los botones
   document.getElementById('btn-si').onclick = () => {
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform?usp=header";
+    sessionStorage.setItem('formularioCompletado', 'true'); // Guardar estado
+    window.location.href = "https://tusitio.com/formulario"; // Cambia esta URL al enlace real
   };
+  
   document.getElementById('btn-no').onclick = () => {
     popup.remove(); // Cierra el popup
   };
