@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo al formulario...</title>
+  <script>
+    // Esperar un momento y luego redirigir al formulario
+    sessionStorage.setItem('formularioCompletado', 'true'); // Reafirma el estado
+    setTimeout(() => {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform?usp=header";
+    }, 500);
+  </script>
+</head>
+<body>
+  <p>Redirigiendo al formulario, por favor espera...</p>
+</body>
+</html>

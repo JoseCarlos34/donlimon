@@ -1,10 +1,10 @@
 setTimeout(() => {
-  // Verificar si el formulario ya fue completado
+  // Verificar si el formulario ya fue completado en esta sesión
   if (sessionStorage.getItem('formularioCompletado')) return;
 
   // Crear el contenedor del mensaje emergente
   const popup = document.createElement('div');
-  popup.className = 'popup show'; // clase para estilos y animación
+  popup.className = 'popup show';
 
   // Contenido del mensaje
   popup.innerHTML = `
@@ -13,15 +13,16 @@ setTimeout(() => {
     <button id="btn-no">No, gracias</button>
   `;
 
-  // Agregar a la página
+  // Agregar el popup al body
   document.body.appendChild(popup);
 
-  // Listeners de los botones
+  // Botón "Sí, quiero"
   document.getElementById('btn-si').onclick = () => {
-    sessionStorage.setItem('formularioCompletado', 'true'); // Guardar estado
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform?usp=header"; // Cambia esta URL al enlace real
+    sessionStorage.setItem('formularioCompletado', 'true'); // Marca como completado
+    window.location.href = "https://donlimon.vercel.app/redirect.html"; // Redirige a la página intermedia
   };
-  
+
+  // Botón "No, gracias"
   document.getElementById('btn-no').onclick = () => {
     popup.remove(); // Cierra el popup
   };
