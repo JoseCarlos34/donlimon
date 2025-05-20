@@ -19,7 +19,7 @@ setTimeout(() => {
   // Listeners de los botones
   document.getElementById('btn-si').onclick = () => {
     sessionStorage.setItem('formularioCompletado', 'true'); // Guardar estado
-    window.location.href = "https://tusitio.com/formulario"; // Cambia esta URL al enlace real
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform?usp=header"; // Cambia esta URL al enlace real
   };
   
   document.getElementById('btn-no').onclick = () => {
