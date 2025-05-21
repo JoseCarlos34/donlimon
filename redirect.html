@@ -3,47 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <title>Gracias por registrarte</title>
-  <meta http-equiv="refresh" content="2;url=https://donlimon.vercel.app/">
+  <meta http-equiv="refresh" content="3;url=https://donlimon.vercel.app/">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@500&display=swap');
 
     body {
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #d4ed91, #a3d858);
-      color: #3a4a00;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #eaffb0, #c1f157);
+      font-family: 'Fredoka', 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1.5s ease-out;
     }
 
     h2 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-      text-shadow: 1px 1px 3px #a4bf26;
+      font-size: 3rem;
+      color: #3a4a00;
+      text-shadow: 2px 2px 4px #b9d745;
+      animation: bounce 1.5s infinite alternate;
     }
 
     p {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #5a6c00;
-      text-shadow: 1px 1px 2px #cde17a;
+      font-size: 1.4rem;
+      color: #4f6000;
+      margin-top: 10px;
+      text-shadow: 1px 1px 2px #d3ef6e;
+      animation: fadeInText 2s ease forwards;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+      margin-top: 15px;
+      animation: emojiPop 1.3s ease-in-out infinite alternate;
+    }
+
+    @keyframes emojiPop {
+      from { transform: scale(1); }
+      to { transform: scale(1.2) rotate(-5deg); }
     }
   </style>
 </head>
 <body>
   <h2>¡Gracias por registrarte! 🥳</h2>
   <p>Serás redirigido automáticamente a la página principal...</p>
+  <div class="emoji">🍋✨</div>
 
   <script>
     // Guardar que ya completó el formulario para no mostrar popup
@@ -51,4 +89,3 @@
   </script>
 </body>
 </html>
-
