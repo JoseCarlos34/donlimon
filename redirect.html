@@ -25,6 +25,7 @@
       color: #3a4a00;
       text-shadow: 2px 2px 4px #b9d745;
       animation: bounce 1.5s infinite alternate;
+      text-align: center;
     }
 
     p {
@@ -32,6 +33,21 @@
       color: #4f6000;
       margin-top: 10px;
       text-shadow: 1px 1px 2px #d3ef6e;
+      animation: fadeInText 2s ease forwards;
+      text-align: center;
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+      margin-top: 15px;
+      animation: emojiPop 1.3s ease-in-out infinite alternate;
+    }
+
+    a {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #3a4a00;
+      text-decoration: underline;
       animation: fadeInText 2s ease forwards;
     }
 
@@ -66,12 +82,6 @@
       }
     }
 
-    .emoji {
-      font-size: 2.5rem;
-      margin-top: 15px;
-      animation: emojiPop 1.3s ease-in-out infinite alternate;
-    }
-
     @keyframes emojiPop {
       from { transform: scale(1); }
       to { transform: scale(1.2) rotate(-5deg); }
@@ -83,8 +93,10 @@
   <p>Serás redirigido automáticamente a la página principal...</p>
   <div class="emoji">🍋✨</div>
 
+  <!-- ✅ Enlace visible como alternativa -->
+  <a href="https://donlimon.vercel.app/">Haz clic aquí si no eres redirigido automáticamente</a>
+
   <script>
-    // Guardar que ya completó el formulario para no mostrar popup
     sessionStorage.setItem('formularioCompletado', 'true');
   </script>
 </body>
