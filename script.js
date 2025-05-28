@@ -16,7 +16,7 @@ setTimeout(() => {
 
   // Botón Sí: redirige al formulario de Google
   document.getElementById('btn-si').onclick = () => {
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfVIPtzBrNJkpq_EObb0O-Rixew92iJtqKOoThm5z1OW_vG8Q/viewform";
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScNwoBiu3cu-LHQETVBEylneezEfsDXyo8GjSCXGqLNBWSkOA/viewform?usp=header";
   };
 
   // Botón No: cierra popup
